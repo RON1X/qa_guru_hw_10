@@ -21,6 +21,7 @@ public class LoginTests extends TestBase {
             "#userName",
             "#password"
     })
+    @DisplayName("Тест с дата провайдером @ValueSource")
     @ParameterizedTest()
     @Tag("login")
     void enableInputField(String id) {
@@ -32,7 +33,7 @@ public class LoginTests extends TestBase {
             "4dm1n, 12345678",
             "email@gmail.com, fdiYVDye323ujH"
     })
-    @DisplayName("Ошибка 'Неправильное имя пользователя или пароль!' при вводе неправильного логина или пароля")
+    @DisplayName("Тест с дата провайдером @CsvSource")
     @ParameterizedTest()
     @Tag("login")
     void invalidUsernameOrPasswordTest(String login, String password) {
@@ -51,6 +52,7 @@ public class LoginTests extends TestBase {
     }
 
     @MethodSource
+    @DisplayName("Тест с дата провайдером @MethodSource")
     @ParameterizedTest
     @Tag("navigation_panel")
     void navigationPanelTest(String groupHeader, List<String> labels) {
